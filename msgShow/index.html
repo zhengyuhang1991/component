@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="wap-font-scale" content="no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>msgShow</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/lib-flexible.js"></script>
+</head>
+<body>
+    <!--<div class="popup-msg">
+        <div class="popup-msg-box">
+            <div class="popup-tips">是否清空所有内容？</div>
+            <div class="popup-msg-btns">
+                <a class="ok" href="javascript:;">确定</a>
+                <a class="err" href="javascript:;">取消</a>
+                <a href="javascript:;">默认</a>
+            </div>
+        </div>
+    </div>-->
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/zepto-touch.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        var msgBox = new msgShow({
+            tips: "是否关闭窗口？",
+            btns: [
+                {
+                    "txt": "确定",
+                    "class": "ok",
+                    "callback": function () {
+                        alert(111);
+                        return false;
+                    }
+                },
+                {
+                    "txt": "取消",
+                    "class": "err",
+                    "callback": function () {
+                        alert(222)
+                    }
+                }
+            ],
+            delay: 2000
+        });
+    </script>
+</body>
+</html>
