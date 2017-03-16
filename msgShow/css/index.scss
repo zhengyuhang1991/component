@@ -1,6 +1,20 @@
 @charset "utf-8";
 @import "mixin";
 
+//  loading
+@keyframes loading{
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading{
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /* 信息提示窗口 */
 .msgbox {
   position: fixed;
@@ -19,7 +33,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: px2rem(30px);
+    padding: px2rem(20px);
     width: 80%;
     border-radius: px2rem(10px);
     -webkit-box-sizing: border-box;
@@ -31,20 +45,20 @@
     &-loading {
       position: relative;
       margin: 0 auto;
-      width: 1rem;
-      height: 1rem;
-      font-size: .2rem;
+      width: px2rem(130px);
+      height: px2rem(130px);
+      @include font-dpr(14px);
       text-align: center;
-      line-height: 1rem;
+      line-height: px2rem(130px);
 
       &:before {
         position: absolute;
         top: 0;
         left: 0;
         content: '';
-        width: 1rem;
-        height: 1rem;
-        border: 2px dashed #ddd;
+        width: px2rem(130px);
+        height: px2rem(130px);
+        border: px2rem(4px) dashed #ddd;
         border-radius: 100%;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
