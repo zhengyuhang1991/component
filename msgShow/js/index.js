@@ -93,7 +93,7 @@
 
                 //  绑定事件
                 btn.tap(function () {
-                    var isClose = callback();
+                    var isClose = callback && callback();
 
                     if (isClose != false) {
                         _this.close();
