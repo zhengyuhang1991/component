@@ -1,11 +1,14 @@
-;(function () {
-    var msgShow = function (ops) {
-        //  默认参数配置
+//  弹窗组件
+;(function ($) {
+    MsgBox = function(ops) {
+        //  配置默认参数
         this.ops = {
-            tips: null,
+            msg: null,
             btns: null,
-            delay: null
-        }
+            delay: null,
+            delayCallback: null
+        };
+
         //  扩展默认参数
         if (ops && $.isPlainObject(ops)) {
             $.extend(this.ops, ops);
@@ -13,92 +16,102 @@
             this.isOps = true;
         }
 
-        //  获取结构
+        //  获取目标DOM
         this.body = $('body');
-        this.popup = $('<div class="popup-msg">');
-        this.popupBox = $('<div class="popup-msg-box">');
-        this.tips = $('<div class="popup-tips">');
-        this.btnsBox = $('<div class="popup-msg-btns">');
+        this.msgbox = $('<div class="popup msgbox">');
+        this.container = $('<div class="msgbox-container">');
+        this.loading = $('<div class="msgbox-container-loading">');
+        this.tips = $('<h2 class="msgbox-container-tips">');
+        this.btnsBox = $('<div class="msgbox-container-btns">');
 
-        // 初始化
-        this.init();
-    };
+        //  生成DOM
+        this.createDOM();
+    }
 
-    msgShow.prototype = {
+    //  设置默认层级且多窗口时叠加
+    MsgBox.zIndex = 999;
+
+    MsgBox.prototype = {
         /*
-        * 初始化
-        * */
-        init: function () {
+         * 生成DOM
+         * */
+        createDOM: function () {
             var _this = this,
                 ops = this.ops,
-                popup = this.popup,
-                popupBox = this.popupBox,
+                body = this.body,
+                msgbox = this.msgbox,
+                container = this.container,
+                loading = this.loading,
                 tips = this.tips,
                 btnsBox = this.btnsBox;
 
+            //  自增层级，保证下次弹窗层级高于上次弹窗层级
+            MsgBox.zIndex++;
+            msgbox.css("zIndex", MsgBox.zIndex);
+
             if (this.isOps) {
-                popupBox.append(tips.text("你好吗？"));
-                popup.append(popupBox);
-                this.body.append(popup);
+                container.append(loading.text("loading.."));
+                msgbox.append(container.css("width", "auto"));
+                body.append(msgbox);
             } else {
-                //  提示信息
-                if (ops.tips) {
-                    popupBox.append(tips.text(ops.tips));
+                //  文字信息
+                if (ops.msg) {
+                    container.append(tips.text(ops.msg));
                 }
 
-                //  按钮组
+                //  定制按钮组
                 if (ops.btns) {
-                    this.createBtns(btnsBox, ops.btns);
-                    /**/
-                    popupBox.append(btnsBox);
+                    this.createBtn(btnsBox, ops.btns);
+                    container.append(btnsBox);
                 }
 
-                //  延迟执行
-                if (ops.delay && ops.delay != 0) {
+                //  延迟关闭
+                if (ops.delay) {
                     setTimeout(function () {
-                       _this.closePopup();
-                    }, ops.delay);
+                        _this.close();
+
+                        //  如果有回调函数则执行
+                        ops.delayCallback && ops.delayCallback();
+                    }, ops.delay)
                 }
 
-                popup.append(popupBox);
-                this.body.append(popup);
+                msgbox.append(container);
+                body.append(msgbox);
             }
         },
         /*
-        * 创建按钮组
-        * */
-        createBtns: function (btnsBox, btns) {
+         * 生成按钮
+         * */
+        createBtn: function (box, btns) {
             var _this = this;
 
             $(btns).each(function (i) {
-                var txt = this.txt ? this.txt : "按钮" + i,
-                    cls = this.class ? this.class : "",
-                    fn = this.callback ? this.callback : null,
-                    btn = $('<a class=' + cls + ' href="javascript:;">' + txt + '</a>');
+                var test = this.test ? this.test : "按钮" + ++i,
+                    cls = this.cls ? this.cls : "",
+                    callback = this.callback ? this.callback : null,
+                    btn = $('<a class="' + cls + '" href="javascript:;">' + test + '</a>');
 
-                btnsBox.append(btn);
+                //  绑定事件
+                btn.tap(function () {
+                    var isClose = callback();
 
-                if (fn) {
-                    btn.tap(function () {
-                        var isClose = fn();
-                        if (isClose != false) {
-                            _this.closePopup();
-                        }
-                    });
-                } else {
-                    btn.tap(function () {
-                        _this.closePopup();
-                    });
-                }
+                    if (isClose != false) {
+                        _this.close();
+                    }
+                });
+
+                //  按钮生成
+                _this.btnsBox.append(btn);
             });
         },
         /*
-        * 关闭该弹窗
-        * */
-        closePopup: function () {
-            this.popup.remove();
+         * 移除窗口
+         * */
+        close: function () {
+            this.msgbox.remove();
         }
-    };
+    }
 
-    window.msgShow = msgShow;
-})();
+    //  注册MsgBox到window对象上
+    window.MsgBox = MsgBox;
+})(Zepto);

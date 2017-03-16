@@ -16,41 +16,28 @@
     <script src="js/lib-flexible.js"></script>
 </head>
 <body>
-    <!--<div class="popup-msg">
-        <div class="popup-msg-box">
-            <div class="popup-tips">是否清空所有内容？</div>
-            <div class="popup-msg-btns">
-                <a class="ok" href="javascript:;">确定</a>
-                <a class="err" href="javascript:;">取消</a>
-                <a href="javascript:;">默认</a>
-            </div>
-        </div>
-    </div>-->
 
     <script src="js/zepto.min.js"></script>
     <script src="js/zepto-touch.js"></script>
     <script src="js/index.js"></script>
     <script>
-        var msgBox = new msgShow({
-            tips: "是否关闭窗口？",
+        var d = new MsgBox({
+            msg: "确认清除购物车吗？",
             btns: [
                 {
-                    "txt": "确定",
-                    "class": "ok",
-                    "callback": function () {
-                        alert(111);
-                        return false;
+                    cls: "ok",
+                    callback: function () {
+                        alert(22)
                     }
                 },
                 {
-                    "txt": "取消",
-                    "class": "err",
-                    "callback": function () {
-                        alert(222)
+                    cls: "err",
+                    callback: function () {
+                        var d = new MsgBox();
+                        return false;
                     }
                 }
-            ],
-            delay: 2000
+            ]
         });
     </script>
 </body>
