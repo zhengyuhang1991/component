@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
-    <title>msgShow</title>
+    <title>MsgShow</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/lib-flexible.js"></script>
@@ -21,24 +21,29 @@
     <script src="js/zepto-touch.js"></script>
     <script src="js/index.js"></script>
     <script>
-        var d = new MsgBox({
-            msg: "确认清除购物车吗？",
-            btns: [
-                {
-                    cls: "ok",
-                    callback: function () {
-                        alert(22)
-                    }
-                },
-                {
-                    cls: "err",
-                    callback: function () {
-                        var d = new MsgBox();
-                        return false;
-                    }
-                }
-            ]
-        });
+        /*
+        * 调用示例：
+        * var x = new MsgBox();     //  默认显示loading
+        *
+        * 传入对象：
+        * var x = new MsgBox({
+        *   width:                  //  默认为80%，只有loading为auto
+        *   loading：               //  是否开启loading旋转    true | false
+        *   icon:                   //  传入字体图标代码
+        *   iconCls:                //  增加字体图标class，自带只有    err
+        *   msg:                    //  传入的内容文本
+        *   btns:                   //  数组形式启用按钮组
+        *                               [
+        *                                   {
+        *                                       test:       //  按钮文字
+        *                                       cls:        //  按钮class，自带ok | err
+        *                                       callback:   //  点击回调函数，默认会关闭弹窗，不想关闭需要return false
+        *                                   }
+        *                               ]
+        *   delay:                  //  延迟执行（单位：秒）
+        *   delayCallback:          //  需要有delay参数传入才可以执行延迟回调函数
+        * });
+        * */
     </script>
 </body>
 </html>
