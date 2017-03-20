@@ -11,26 +11,29 @@
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
     <title>MsgShow</title>
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../libs/common-mobile.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/lib-flexible.js"></script>
+    <script src="../libs/lib-flexible.js"></script>
 </head>
 <body>
 
-    <script src="js/zepto.min.js"></script>
-    <script src="js/zepto-touch.js"></script>
+    <script src="../libs/zepto.min.js"></script>
+    <script src="../libs/zepto-touch.js"></script>
     <script src="js/index.js"></script>
     <script>
         /*
+        *   依赖zepto.js 和 zepto-touch.js
+        *   jQuery使用需要将index.js内的Tap事件改为click
+        *
         * 调用示例：
         * var x = new MsgBox();     //  默认显示loading
         *
         * 传入对象：
         * var x = new MsgBox({
         *   width:                  //  默认为80%，只有loading为auto
-        *   loading：               //  是否开启loading旋转    true | false
         *   icon:                   //  传入字体图标代码
         *   iconCls:                //  增加字体图标class，自带只有    err
+        *   loading：               //  是否开启loading旋转    true | false    需要启用icon才可用
         *   msg:                    //  传入的内容文本
         *   btns:                   //  数组形式启用按钮组
         *                               [
