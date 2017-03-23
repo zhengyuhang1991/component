@@ -23,28 +23,28 @@
     <script>
         /*
         *   依赖zepto.js 和 zepto-touch.js
-        *   jQuery使用需要将index.js内的Tap事件改为click
+        *   jQuery使用需要将index.js内的Tap事件改为click即可
         *
-        * 调用示例：
+        * 调用示例(无参数)：
         * var x = new MsgBox();     //  默认显示loading
         *
-        * 传入对象：
+        * 调用示例(传入对象参数)：
         * var x = new MsgBox({
-        *   width:                  //  默认为80%，只有loading为auto
-        *   icon:                   //  传入字体图标代码
-        *   iconCls:                //  增加字体图标class，自带只有    err
-        *   loading：               //  是否开启loading旋转    true | false    需要启用icon才可用
-        *   msg:                    //  传入的内容文本
+        *   width:                  //  默认为80%，仅有loading状态时为auto
+        *   icon:                   //  传入字体图标的代码
+        *   iconCls:                //  (依赖 icon) 增加字体图标class(用于修改字体图标颜色),默认只有err(红色)
+        *   loading：               //  (依赖 icon) 是否开启loading旋转;Boolean值
+        *   msg:                    //  传入的提示信息文本
         *   btns:                   //  数组形式启用按钮组
         *                               [
         *                                   {
         *                                       test:       //  按钮文字
-        *                                       cls:        //  按钮class，自带ok | err
+        *                                       cls:        //  按钮class，默认有ok | err(用于定制按钮的背景)
         *                                       callback:   //  点击回调函数，默认会关闭弹窗，不想关闭需要return false
         *                                   }
         *                               ]
-        *   delay:                  //  延迟执行（单位：秒）
-        *   delayCallback:          //  需要有delay参数传入才可以执行延迟回调函数
+        *   delay:                  //  延迟执行(单位：秒)
+        *   delayCallback:          //  (依赖 delay) 需要有delay参数传入才可以执行延迟回调函数
         * });
         * */
     </script>

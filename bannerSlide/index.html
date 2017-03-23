@@ -11,38 +11,119 @@
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<div class="slide">
-        <a href="javascript:;" class="slide-btn slide-prev">&lt;</a>
-        <a href="javascript:;" class="slide-btn slide-next">&gt;</a>
+	<div class="slide slide1">
+        <a href="javascript:;" class="slide-btn slide-prev iconfont">&#xe668;</a>
+        <a href="javascript:;" class="slide-btn slide-next iconfont">&#xe669;</a>
         <div class="slide-box">
             <ul class="slide-list">
                 <li>
-                    <a href="#">
+                    <a href="javascript:;">
                         <img src="images/01.jpg">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="javascript:;">
                         <img src="images/02.jpg">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="javascript:;">
                         <img src="images/03.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/04.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/05.jpg">
                     </a>
                 </li>
             </ul>
         </div>
-        <div class="slide-idx">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+    </div>
+    <div class="slide slide2">
+        <a href="javascript:;" class="slide-btn slide-prev iconfont">&#xe668;</a>
+        <a href="javascript:;" class="slide-btn slide-next iconfont">&#xe669;</a>
+        <div class="slide-box">
+            <ul class="slide-list">
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/01.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/02.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/03.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/04.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/05.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide slide3">
+        <a href="javascript:;" class="slide-btn slide-prev iconfont">&#xe668;</a>
+        <a href="javascript:;" class="slide-btn slide-next iconfont">&#xe669;</a>
+        <div class="slide-box">
+            <ul class="slide-list">
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/01.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/02.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/03.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/04.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/05.jpg">
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        for (var i=1;i<4;i++) {
+            var a = new Slide({
+                el: ".slide" + i,
+                creatIdx: true, //是否生成索引块
+                autoRun: true,   //是否自动切换
+                //autoRunReverse: true,   //是否反向循环
+                autoRunTime: 2.5,    //每次自动运行间隔时间
+                transitionTime: 1    //动画过渡时间(单位:秒)
+            });
+        }
+    </script>
 </body>
 </html>

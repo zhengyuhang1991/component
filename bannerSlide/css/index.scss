@@ -5,14 +5,18 @@
 */
 .slide {
   position: relative;
-  width: 100%;
+  margin: 0 auto;
+  width: 800px;
   font-size: 0;
   overflow: hidden;
 
-  &-list {
+  &-box {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+  }
+  &-list {
     white-space: nowrap;
 
     li {
@@ -28,19 +32,17 @@
     position: absolute;
     top: 50%;
     z-index: 10;
-    margin-top: -30px;
-    width: 60px;
-    height: 60px;
-    font-size: 34px;
-    color: #000;
+    margin-top: -25px;
+    font-size: 50px;
+    color: #fff;
     text-align: center;
-    line-height: 56px;
-    border-radius: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 2px solid rgba(255, 255, 255, .7);
-    background: rgba(255, 255, 255, .5);
+    line-height: 1;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
   }
   &-prev {
     left: 30px;
@@ -60,8 +62,8 @@
 
     li {
       display: inline-block;
-      margin: 0 10px;
-      width: 100px;
+      margin: 0 5px;
+      width: 50px;
       height: 5px;
       background: rgba(255, 255, 255, .5);
       -webkit-transition: all .3s;
@@ -71,8 +73,21 @@
       transition: all .3s;
 
       &.on {
-        width: 110px;
-        background: rgba(255, 255, 255, .8);
+        width: 70px;
+        background: rgba(255, 255, 255, .9);
+      }
+    }
+  }
+  
+  //鼠标划入效果
+  &:hover {
+    .slide {
+      &-btn {
+        opacity: .7;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

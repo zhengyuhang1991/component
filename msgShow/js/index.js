@@ -54,7 +54,7 @@
             msgbox.css("zIndex", MsgBox.zIndex);
 
             if (this.isOps) {
-                container.append(icon.html("&#xe86b;").addClass("animate"));
+                container.append(icon.html("&#xe648;").addClass("animate"));
                 msgbox.append(container.css("width", "auto"));
                 body.append(msgbox);
             } else {
