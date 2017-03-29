@@ -4,7 +4,6 @@
             el: null,    //传入外层容器选择器
             creatIdx: false, //是否生成索引块
             autoRun: false,   //是否自动切换
-            //autoRunReverse: false,   //是否反向循环
             autoRunTime: 3,    //每次自动运行间隔时间(单位:秒)
             transitionTime: .5    //动画过渡时间(单位:秒)
             //loop: false   //是否循环展示
@@ -83,6 +82,7 @@
             var _this = this,
                 ops = this.ops,
                 wrap = this.wrap,
+                idxBox = this.idxBox,
                 prev = this.prev,
                 next = this.next,
                 list = this.list,
@@ -103,6 +103,13 @@
                 clearInterval(timer);
             }).mouseleave(function () {
                 timer = setInterval(slideGo, ops.autoRunTime * 1000);
+            });
+
+            //索引块点击切换至对应板块
+            $(idxBox).on("click", "li", function () {
+                idx = $(this).index();
+
+                _this.runFix(idx);
             });
 
             //左右切换事件
@@ -165,8 +172,6 @@
                     transition: ops.transitionTime + "s"
                 });
             }
-
-
         }
     };
 
