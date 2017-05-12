@@ -5,8 +5,8 @@
             creatIdx: false, //是否生成索引块
             autoRun: false,   //是否自动切换
             autoRunTime: 3,    //每次自动运行间隔时间(单位:秒)
-            transitionTime: .5    //动画过渡时间(单位:秒)
-            //loop: false   //是否循环展示
+            transitionTime: .5,    //动画过渡时间(单位:秒)
+            loop: false   //是否循环展示
         }
 
         //扩展对象参数
@@ -55,6 +55,11 @@
             if (ops.autoRun) {
                 this.start();
             }
+
+            //是否循环
+            if (ops.loop) {
+                this.loop();
+            }
         },
         /*
          * 生成索引块
@@ -90,7 +95,7 @@
                 len = list.find('li').length,
                 li = slideBox.find('li'),
                 idx = Slide.index,
-                timer = null, //设定定时器;
+                timer = null; //设定定时器
 
             //执行自动切换
             timer = setInterval(slideGo, ops.autoRunTime * 1000);
@@ -172,6 +177,17 @@
                     transition: ops.transitionTime + "s"
                 });
             }
+        },
+        /*
+         * 循环展示
+         * */
+        loop: function () {
+            var list = this.list,
+                firstEl = list.find("li:first"),
+                lastEl = list.find("li:last");
+
+            list.prepend(firstEl);
+            list.append(lastEl);
         }
     };
 

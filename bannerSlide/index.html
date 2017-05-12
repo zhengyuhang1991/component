@@ -34,7 +34,7 @@
             </ul>
         </div>
     </div>
-    <div class="slide slide2">
+    <!--<div class="slide slide2">
         <a href="javascript:;" class="slide-btn slide-prev iconfont">&#xe668;</a>
         <a href="javascript:;" class="slide-btn slide-next iconfont">&#xe669;</a>
         <div class="slide-box">
@@ -94,21 +94,32 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div>-->
 
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <script>
-        for (var i=1;i<4;i++) {
+        //  单个轮播使用
+        var a = new Slide({
+            el: ".slide",
+            creatIdx: true, //是否生成索引块
+            autoRun: true,   //是否自动切换
+            loop: true,   //是否循环
+            autoRunTime: 2.5,    //每次自动运行间隔时间
+            transitionTime: 1    //动画过渡时间(单位:秒)
+        });
+
+        //  多个轮播需要循环使用
+        /*for (var i=1;i<4;i++) {
             var a = new Slide({
                 el: ".slide" + i,
                 creatIdx: true, //是否生成索引块
                 autoRun: true,   //是否自动切换
-                //autoRunReverse: true,   //是否反向循环
+                loop: true,   //是否循环
                 autoRunTime: 2.5,    //每次自动运行间隔时间
                 transitionTime: 1    //动画过渡时间(单位:秒)
             });
-        }
+        }*/
     </script>
 </body>
 </html>
