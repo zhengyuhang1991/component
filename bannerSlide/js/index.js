@@ -64,8 +64,7 @@
          * 生成索引块
          * */
         creatIdxList: function () {
-            var ops = this.ops,
-                wrap = this.wrap,
+            var wrap = this.wrap,
                 idxBox = this.idxBox,
                 list = this.list,
                 len = list.find('li').length,
