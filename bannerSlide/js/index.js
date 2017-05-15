@@ -5,8 +5,7 @@
             creatIdx: false, //是否生成索引块
             autoRun: false,   //是否自动切换
             autoRunTime: 3,    //每次自动运行间隔时间(单位:秒)
-            transitionTime: .5,    //动画过渡时间(单位:秒)
-            loop: false   //是否循环展示
+            transitionTime: .5    //动画过渡时间(单位:秒)
         }
 
         //扩展对象参数
@@ -24,7 +23,7 @@
         this.init();
     };
 
-    Slide.index = 0; //定时器索引值
+    Slide.index = 1; //定时器索引值
 
     Slide.prototype = {
         /*
@@ -34,6 +33,7 @@
             var ops = this.ops,
                 wrap = this.wrap,
                 slideBox = this.slideBox,
+                wrapWidth = wrap.width(),
                 listHeight = this.list.height();
 
             //设定关键属性
@@ -43,7 +43,7 @@
             });
             slideBox.css({
                 position: "absolute",
-                left: 0
+                left: -wrapWidth + "px"
             });
 
             //是否生成索引块
@@ -56,16 +56,16 @@
                 this.start();
             }
 
-            //是否循环
-            if (ops.loop) {
-                this.loop();
+            if (ops.transitionTime && ops.transitionTime != 0) {
+                ops.transitionTime = ops.transitionTime;
             }
         },
         /*
          * 生成索引块
          * */
         creatIdxList: function () {
-            var wrap = this.wrap,
+            var ops = this.ops,
+                wrap = this.wrap,
                 idxBox = this.idxBox,
                 list = this.list,
                 len = list.find('li').length,
@@ -79,6 +79,12 @@
             idxBox.append(idxUl)
                 .find("li").eq(0).addClass("on");
             wrap.append(idxBox);
+
+            var firstEl = list.find("li:first").clone(),
+                lastEl = list.find("li:last").clone();
+
+            list.prepend(lastEl);
+            list.append(firstEl);
         },
         /*
          * 开启自动切换
@@ -87,6 +93,7 @@
             var _this = this,
                 ops = this.ops,
                 wrap = this.wrap,
+                wrapWidth = wrap.width(),
                 idxBox = this.idxBox,
                 prev = this.prev,
                 next = this.next,
@@ -100,9 +107,6 @@
             //执行自动切换
             timer = setInterval(slideGo, ops.autoRunTime * 1000);
 
-            //增加过渡动画
-            this.transitionSet();
-
             //移入清除自动切换,移出时增加自动切换
             wrap.mouseenter(function () {
                 clearInterval(timer);
@@ -112,33 +116,44 @@
 
             //索引块点击切换至对应板块
             $(idxBox).on("click", "li", function () {
-                idx = $(this).index();
+                idx = $(this).index() + 1;
 
                 _this.runFix(idx);
             });
 
             //左右切换事件
             prev.click(function () {
-                idx--;
+                if (!$(slideBox).is(":animated")) {
+                    idx--;
 
-                if (idx < 0) {
-                    idx = len - 1;
+                    if (idx < 1) {
+                        idx = len - 1;
+                        slideBox.css("left", idx * -wrapWidth + "px");
+                        idx--;
+                    }
+                    _this.runFix(idx);
                 }
-                _this.runFix(idx);
             });
             next.click(function () {
-                idx++;
+                if (!$(slideBox).is(":animated")) {
+                    idx++;
 
-                if (idx > len - 1) {
-                    idx = 0;
+                    if (idx >= len - 1) {
+                        idx = 0;
+                        slideBox.css("left", idx * wrapWidth + "px");
+                        idx++;
+                    }
+                    _this.runFix(idx);
                 }
-                _this.runFix(idx);
+
             });
 
             function slideGo() {
-                if (idx == len - 1) {
+                idx++;
+
+                if (idx >= len - 1) {
                     idx = 0;
-                } else {
+                    slideBox.css("left", idx * wrapWidth + "px");
                     idx++;
                 }
                 _this.runFix(idx);
@@ -148,46 +163,19 @@
          * 板块滑动 && 修正索引值
          * */
         runFix: function (i) {
-            var wrap = this.wrap,
+            var ops = this.ops,
+                wrap = this.wrap,
                 slideBox = this.slideBox,
                 idxBox = this.idxBox,
                 idxLi = idxBox.find('li'),
                 wrapWidth = wrap.width();
 
-            slideBox.css("left", -(i * wrapWidth) + "px");
+            slideBox.animate({
+                left: -((i) * wrapWidth) + "px"
+            }, ops.transitionTime * 1000);
 
             idxLi.removeClass("on")
-                .eq(i).addClass("on");
-        },
-        /*
-         * 滑动过渡时间
-         * */
-        transitionSet: function (time) {
-            var ops = this.ops,
-                slideBox = this.slideBox;
-
-            if (time) {
-                slideBox.css({
-                    webkitTransition: time + "s",
-                    transition: time + "s"
-                });
-            } else {
-                slideBox.css({
-                    webkitTransition: ops.transitionTime + "s",
-                    transition: ops.transitionTime + "s"
-                });
-            }
-        },
-        /*
-         * 循环展示
-         * */
-        loop: function () {
-            var list = this.list,
-                firstEl = list.find("li:first"),
-                lastEl = list.find("li:last");
-
-            list.prepend(firstEl);
-            list.append(lastEl);
+                .eq(i - 1).addClass("on");
         }
     };
 

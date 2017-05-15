@@ -31,6 +31,16 @@
                         <img src="images/03.jpg">
                     </a>
                 </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/04.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/05.jpg">
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -104,18 +114,17 @@
             el: ".slide",
             creatIdx: true, //是否生成索引块
             autoRun: true,   //是否自动切换
-            loop: true,   //是否循环
             autoRunTime: 2.5,    //每次自动运行间隔时间
             transitionTime: 1    //动画过渡时间(单位:秒)
         });
 
         //  多个轮播需要循环使用
-        /*for (var i=1;i<4;i++) {
+        /*var slideLen = $(".slide").length;
+        for (var i = 1; i < slideLen; i++) {
             var a = new Slide({
                 el: ".slide" + i,
                 creatIdx: true, //是否生成索引块
                 autoRun: true,   //是否自动切换
-                loop: true,   //是否循环
                 autoRunTime: 2.5,    //每次自动运行间隔时间
                 transitionTime: 1    //动画过渡时间(单位:秒)
             });
