@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import "../../../libs/mixin";
+
+//  tab选项卡 - PC
+.tab {
+  &box {
+    margin: 50px auto 0;
+    width: 502px;
+  }
+  //  切换元素
+  &-con {
+    position: relative;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      width: 120px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      line-height: 2;
+      border-radius: 5px 5px 0 0;
+      border: 1px solid #ddd;
+      border-bottom: 0;
+      cursor: pointer;
+      background: #ddd;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
+      &.on {
+        color: #222;
+        background: #fff;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  //  切换内容区域
+  &-conbox {
+    margin-top: -1px;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ddd;
+
+    &-div {
+      display: none;
+      &.on {
+        display: block;
+      }
+
+      li {
+        font-size: 12px;
+        color: #888;
+        line-height: 1.4;
+      }
+    }
+  }
+}
