@@ -3,7 +3,6 @@
         this.ops = {
             el: null,    //传入外层容器选择器
             creatIdx: false, //是否生成索引块
-            autoRun: false,   //是否自动切换
             autoRunTime: 3,    //每次自动运行间隔时间(单位:秒)
             transitionTime: .5    //动画过渡时间(单位:秒)
         }
@@ -51,12 +50,12 @@
                 this.creatIdxList();
             }
 
-            //是否自动切换
-            if (ops.autoRun) {
-                this.start();
-            }
+            //生成循环结构
+            this.createNew();
+            //启用自动切换
+            this.start();
 
-            if (ops.transitionTime && ops.transitionTime != 0) {
+            if (ops.transitionTime) {
                 ops.transitionTime = ops.transitionTime;
             }
         },
@@ -78,6 +77,12 @@
             idxBox.append(idxUl)
                 .find("li").eq(0).addClass("on");
             wrap.append(idxBox);
+        },
+        /*
+        * 生成循环结构
+        * */
+        createNew: function () {
+            var list = this.list;
 
             var firstEl = list.find("li:first").clone(),
                 lastEl = list.find("li:last").clone();
