@@ -70,15 +70,29 @@
         start: function () {
             var ops = this.ops,
                 con = this.con,
+                conbox = this.conbox,
                 conLi = con.find("li"),
                 conLiLen = conLi.length,
-                conbox = this.conbox,
                 _this = this,
                 timer = null;
 
             //开启自动切换
             timer = setInterval(startRun, ops.autoRunTime * 1000);
-            
+
+            //鼠标进入切换区域则关闭自动切换
+            function closeAutoRun(el) {
+                var element = $(el);
+
+                element.mouseenter(function () {
+                    clearInterval(timer);
+                }).mouseleave(function () {
+                    timer = setInterval(startRun, ops.autoRunTime * 1000);
+                });
+            }
+            closeAutoRun(con);
+            closeAutoRun(conbox);
+
+            //自动切换方法
             function startRun() {
                 var idx = con.find("li.on").index();
 
