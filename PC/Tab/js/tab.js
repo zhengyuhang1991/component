@@ -40,17 +40,17 @@
          * 指定切换
          * */
         tabEvent: function () {
-            var con = this.con,
-                conLi = con.find("li"),
-                conbox = this.conbox;
+            var ops = this.ops,
+                con = this.con,
+                conLi = con.find("li");
 
             conLi.click(function () {
                 var idx = $(this).index();
 
                 $(this)
                     .addClass("on").siblings().removeClass("on")
-                    .parents(con).siblings(conbox)
-                    .children("div").eq(idx).addClass("on").siblings().removeClass("on");
+                    .parents(ops.con).siblings(ops.conbox).children("div").eq(idx)
+                    .addClass("on").siblings().removeClass("on");
             });
         },
         /*
@@ -59,10 +59,14 @@
         defaultToggle: function (i) {
             var con = this.con,
                 conLi = con.find("li"),
-                conbox = this.conbox;
+                conbox = this.conbox,
+                conboxDiv = conbox.children("div");
 
-            conLi.eq(i).addClass("on").siblings().removeClass("on");
-            conbox.children("div").eq(i).addClass("on").siblings().removeClass("on");
+            function commonToggle(obj) {
+                obj.eq(i).addClass("on").siblings().removeClass("on");
+            }
+            commonToggle(conLi);
+            commonToggle(conboxDiv);
         },
         /*
          * 自动切换内容区
@@ -74,10 +78,11 @@
                 conLi = con.find("li"),
                 conLiLen = conLi.length,
                 _this = this,
-                timer = null;
+                timer = null,
+                runTime = ops.autoRunTime * 1000;
 
             //开启自动切换
-            timer = setInterval(startRun, ops.autoRunTime * 1000);
+            timer = setInterval(startRun, runTime);
 
             //鼠标进入切换区域则关闭自动切换
             function closeAutoRun(el) {
@@ -86,7 +91,7 @@
                 element.mouseenter(function () {
                     clearInterval(timer);
                 }).mouseleave(function () {
-                    timer = setInterval(startRun, ops.autoRunTime * 1000);
+                    timer = setInterval(startRun, runTime);
                 });
             }
             closeAutoRun(con);
@@ -101,7 +106,7 @@
                 if (idx > conLiLen - 1) {
                     idx = 0;
                 }
-                
+
                 _this.defaultToggle(idx);
             }
         }

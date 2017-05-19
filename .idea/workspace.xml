@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5eda56a4-6679-43fa-bb7e-3af35056b039" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/msgShow/css/index.css.map" afterPath="$PROJECT_DIR$/Mobile/msgShow/css/index.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/Slide/Slide.html" afterPath="$PROJECT_DIR$/PC/Slide/Slide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/Tab/css/index.scss" afterPath="$PROJECT_DIR$/PC/Tab/css/index.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/Tab/js/tab.js" afterPath="$PROJECT_DIR$/PC/Tab/js/tab.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/Tab/tab.html" afterPath="$PROJECT_DIR$/PC/Tab/tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.css.map" afterPath="$PROJECT_DIR$/libs/common-mobile.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common.css.map" afterPath="$PROJECT_DIR$/libs/common.css.map" />
     </list>
     <ignored path="component.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,12 +30,12 @@
           <file leaf-file-name="tab.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/PC/Tab/tab.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="50" column="8" selection-start-line="50" selection-start-column="4" selection-end-line="113" selection-end-column="13" />
+                <state relative-caret-position="452">
+                  <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
                   <folding>
                     <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <marker date="1495117187060" expanded="false" signature="2635:3539" placeholder="..." />
+                    <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -49,11 +44,9 @@
           <file leaf-file-name="Slide.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/PC/Slide/Slide.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-606">
+                <state relative-caret-position="1080">
                   <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-                  <folding>
-                    <marker date="1495117165097" expanded="false" signature="2410:3496" placeholder="..." />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -62,11 +55,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/PC/Tab/css/index.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+                <state relative-caret-position="250">
+                  <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tab.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/PC/Tab/js/tab.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2496">
+                  <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -90,7 +93,6 @@
         <option value="F:/program/www.hx9999.com/images.hx9999.com/styles/index_cn.css" />
         <option value="F:/program/www.hx9999.com/www.hx9999.com/cn/index.html" />
         <option value="F:/program/www.hx9999.com/images.hx9999.com/styles/handan.scss" />
-        <option value="F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq.html" />
         <option value="F:/program/www.hx9999.com/www.hx9999.com/cn/lp/inmobi.html" />
         <option value="F:/program/www.hx9999.com/www.hx9999.com/cn/lp/oppoxxl_tr100yr10000.html" />
         <option value="F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq_s300.html" />
@@ -114,10 +116,11 @@
         <option value="$PROJECT_DIR$/PC/tab/js/index.js" />
         <option value="$PROJECT_DIR$/PC/tab/tab.html" />
         <option value="$PROJECT_DIR$/Mobile/msgShow/msgshow.html" />
-        <option value="$PROJECT_DIR$/PC/Tab/js/tab.js" />
         <option value="$PROJECT_DIR$/PC/Slide/Slide.html" />
-        <option value="$PROJECT_DIR$/PC/Tab/tab.html" />
         <option value="$PROJECT_DIR$/PC/Tab/css/index.scss" />
+        <option value="F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq.html" />
+        <option value="$PROJECT_DIR$/PC/Tab/js/tab.js" />
+        <option value="$PROJECT_DIR$/PC/Tab/tab.html" />
       </list>
     </option>
   </component>
@@ -130,8 +133,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -254,14 +257,15 @@
       <workItem from="1494921724034" duration="153000" />
       <workItem from="1495072750265" duration="12462000" />
       <workItem from="1495115983635" duration="2095000" />
+      <workItem from="1495173702741" duration="6984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51658000" />
+    <option name="totallyTimeSpent" value="58642000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -294,11 +298,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp/oppoxxl_tr100yr10000.html" />
     <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/index.html" />
     <entry file="file://F:/program/www.hx9999.com/images.hx9999.com/styles/handan.scss" />
     <entry file="file://$PROJECT_DIR$/bannerSlide/index.html" />
@@ -345,7 +350,6 @@
     <entry file="file://F:/program/www.hx9999.com/images.hx9999.com/styles/handan.scss" />
     <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp/inmobi.html" />
     <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp/oppoxxl_tr100yr10000.html" />
-    <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq.html" />
     <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq_s300.html" />
     <entry file="file://$PROJECT_DIR$/../MyWeb/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -451,39 +455,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PC/Slide/Slide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-606">
+        <state relative-caret-position="1080">
           <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <marker date="1495117165097" expanded="false" signature="2410:3496" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PC/Tab/tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="4" selection-end-line="113" selection-end-column="13" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1495117187060" expanded="false" signature="2635:3539" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PC/Tab/js/tab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PC/Tab/css/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="250">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/program/www.hx9999.com/images.hx9999.com/lp/lp_v54/lp_v54.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="219" column="38" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/Tab/js/tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2496">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/Tab/tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

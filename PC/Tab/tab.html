@@ -48,12 +48,11 @@
             </div>
         </div>
     </div>
-    <!--<div class="tabbox">
+    <div class="tabbox">
         <div class="tab-con tab-con2">
             <ul>
                 <li>tab-1</li>
                 <li>tab-2</li>
-                <li>tab-3</li>
             </ul>
         </div>
         <div class="tab-conbox tab-conbox2">
@@ -69,13 +68,6 @@
                     <li>tab-2 内容</li>
                     <li>tab-2 内容</li>
                     <li>tab-2 内容</li>
-                </ul>
-            </div>
-            <div class="tab-conbox-div">
-                <ul>
-                    <li>tab-3 内容</li>
-                    <li>tab-3 内容</li>
-                    <li>tab-3 内容</li>
                 </ul>
             </div>
         </div>
@@ -111,31 +103,31 @@
                 </ul>
             </div>
         </div>
-    </div>-->
+    </div>
 
     <script src="../../libs/jquery.min.js"></script>
     <script src="js/tab.js"></script>
     <script>
         //单个Tab选项卡调用方式
-        var a = new Tab({
+        /*var a = new Tab({
             con: ".tab-con",    //控制块class
             conbox: ".tab-conbox",  //切换内容区class
             autoRun: true,   //是否开启内容区域自动切换
             //autoRunTime: 3,   //非必须，默认3秒自动切换区域(单位：秒)    注：autoRun为true才可启用
             //defaultIdx: 1   //非必须，如无配置，默认显示高亮第一个控制块、显示第一个内容区域(最低数值1)
-        });
+        });*/
 
         //多个Tab选项卡调用方式
-        /*var tabLen = $(".tabbox").length;
+        var tabLen = $(".tabbox").length;
         for (var i = 1; i <= tabLen; i++) {
             var a = new Tab({
                 con: ".tab-con" + i,    //控制块class
                 conbox: ".tab-conbox" + i,  //切换内容区class
-                autoRun: true,   //是否开启内容区域自动切换
+                autoRun: false,   //是否开启内容区域自动切换
                 //autoRunTime: 3,   //非必须，默认3秒自动切换区域(单位：秒)    注：autoRun为true才可启用
                 //defaultIdx: 1   //非必须，如无配置，默认显示高亮第一个控制块、显示第一个内容区域(最低数值1)
             });
-        }*/
+        }
     </script>
 </body>
 </html>
