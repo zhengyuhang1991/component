@@ -1,6 +1,7 @@
 ;(function () {
     Tab = function (ops) {
         this.ops = {
+            mode: "click",      //切换模式
             con: ".tab-con",    //控制块class
             conbox: ".tab-conbox",  //切换内容区class
             autoRun: false,   //是否开启内容区域自动切换
@@ -42,9 +43,15 @@
         tabEvent: function () {
             var ops = this.ops,
                 con = this.con,
-                conLi = con.find("li");
+                conLi = con.find("li"),
+                mode = ops.mode;
 
-            conLi.click(function () {
+            //  切换模式
+            if (mode != "click") {
+                mode = "mouseover";
+            }
+            
+            conLi.on(mode, function () {
                 var idx = $(this).index();
 
                 $(this)
