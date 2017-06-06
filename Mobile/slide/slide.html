@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="wap-font-scale" content="no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>slide - 移动端</title>
+    <link rel="stylesheet" href="../../libs/common-mobile.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="../../libs/lib-flexible.js"></script>
+</head>
+<body>
+    <div class="MSlide">
+        <div class="MSlide-list">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/01.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/02.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/03.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/04.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/05.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../../libs/zepto.min.js"></script>
+    <script src="js/MSlide.js"></script>
+    <script>
+        //  调用MSlide方式
+        var a = new MSlide({
+            createIdx: true,     //  是否生成索引块
+            autoPlay: true,     //  是否自动播放
+            autoPlayTime: 3
+        });
+    </script>
+</body>
+</html>
