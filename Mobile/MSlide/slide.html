@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
-    <title>slide - 移动端</title>
+    <title>MSlide</title>
     <link rel="stylesheet" href="../../libs/common-mobile.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="../../libs/lib-flexible.js"></script>
@@ -53,9 +53,10 @@
     <script>
         //  调用MSlide方式
         var a = new MSlide({
-            createIdx: true,     //  是否生成索引块
+            el: ".MSlide",      //  目标对象
+            createIdx: true,    //  是否生成索引块
             autoPlay: true,     //  是否自动播放
-            autoPlayTime: 3
+            autoPlayTime: 3     //  自动播放间隔
         });
     </script>
 </body>

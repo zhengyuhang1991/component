@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eda56a4-6679-43fa-bb7e-3af35056b039" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/js/MSlide.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/js/lib-flexible.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/slide.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.css" afterPath="$PROJECT_DIR$/Mobile/slide/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.css.map" afterPath="$PROJECT_DIR$/Mobile/slide/css/index.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.scss" afterPath="$PROJECT_DIR$/Mobile/slide/css/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/Slide/css/index.scss" afterPath="$PROJECT_DIR$/PC/Slide/css/index.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.css" afterPath="$PROJECT_DIR$/libs/common-mobile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.css.map" afterPath="$PROJECT_DIR$/libs/common-mobile.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.scss" afterPath="$PROJECT_DIR$/libs/common-mobile.scss" />
     </list>
     <ignored path="component.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,26 +36,24 @@
     <favorites_list name="component" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.45607615">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="slide.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mobile/slide/slide.html">
+          <file leaf-file-name="slide.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Mobile/MSlide/slide.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
+                <state relative-caret-position="-516">
+                  <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="msgshow.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="msgshow.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Mobile/msgShow/js/msgshow.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+                <state relative-caret-position="66">
+                  <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -56,23 +62,18 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Mobile/slide/css/index.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="MSlide.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Mobile/slide/js/MSlide.js">
+            <entry file="file://$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="451">
-                  <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
-                  <folding />
+                <state relative-caret-position="333">
+                  <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#608#895#0" expanded="false" />
+                    <element signature="e#2585#3109#0" expanded="false" />
+                    <element signature="e#3472#3547#0" expanded="false" />
+                    <element signature="e#3633#4432#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -105,7 +106,6 @@
         <option value="$PROJECT_DIR$/libs/zepto-touch.js" />
         <option value="$PROJECT_DIR$/msgShow/index.html" />
         <option value="$PROJECT_DIR$/libs/lib-flexible.js" />
-        <option value="$PROJECT_DIR$/libs/common-mobile.scss" />
         <option value="$PROJECT_DIR$/libs/fastclick.min.js" />
         <option value="$PROJECT_DIR$/../MyWeb/js/index.js" />
         <option value="$PROJECT_DIR$/../MyWeb/index.html" />
@@ -129,6 +129,10 @@
         <option value="$PROJECT_DIR$/Mobile/slide/js/index.js" />
         <option value="$PROJECT_DIR$/Mobile/slide/slide.html" />
         <option value="$PROJECT_DIR$/Mobile/slide/js/MSlide.js" />
+        <option value="$PROJECT_DIR$/libs/common-mobile.scss" />
+        <option value="$PROJECT_DIR$/Mobile/MSlide/css/index.scss" />
+        <option value="$PROJECT_DIR$/Mobile/MSlide/slide.html" />
+        <option value="$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js" />
       </list>
     </option>
   </component>
@@ -267,14 +271,17 @@
       <workItem from="1495115983635" duration="2095000" />
       <workItem from="1495173702741" duration="6984000" />
       <workItem from="1496756377074" duration="4964000" />
+      <workItem from="1496840998672" duration="13000" />
+      <workItem from="1496841082446" duration="8931000" />
+      <workItem from="1496931274074" duration="5063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63606000" />
+    <option name="totallyTimeSpent" value="77613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -313,15 +320,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../MyWeb/my-project/elm/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3792">
-          <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bannerSlide/js/index.js" />
-    <entry file="file://$PROJECT_DIR$/bannerSlide/css/index.scss" />
     <entry file="file://$PROJECT_DIR$/msgShow/css/index.scss" />
     <entry file="file://$PROJECT_DIR$/libs/common.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -364,13 +362,6 @@
     <entry file="file://$PROJECT_DIR$/bannerSlide/index.html" />
     <entry file="file://$PROJECT_DIR$/libs/zepto-touch.js" />
     <entry file="file://$PROJECT_DIR$/bannerSlide/js/index.js" />
-    <entry file="file://$PROJECT_DIR$/libs/common-mobile.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="91" column="16" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BlankTemplate/Mobile(100px=1rem)/css/common.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -436,19 +427,11 @@
     <entry file="file://$PROJECT_DIR$/PC/bannerSlide/js/index.js" />
     <entry file="file://F:/program/www.hx9999.com/images.hx9999.com/lp/lp_v54/lp_v54.css" />
     <entry file="file://F:/program/www.hx9999.com/www.hx9999.com/cn/lp_v54_zbchzdq.html" />
-    <entry file="file://$PROJECT_DIR$/Mobile/slide/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Mobile/slide/index.html" />
     <entry file="file://$PROJECT_DIR$/PC/Tab/js/tab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -456,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -464,11 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -476,10 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#1426#3500#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="81" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,49 +474,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mobile/slide/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mobile/slide/css/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mobile/slide/slide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Mobile/slide/js/index.js" />
+    <entry file="file://$PROJECT_DIR$/Mobile/slide/css/index.scss" />
+    <entry file="file://$PROJECT_DIR$/Mobile/slide/slide.html" />
+    <entry file="file://$PROJECT_DIR$/Mobile/slide/js/MSlide.js" />
     <entry file="file://$PROJECT_DIR$/Mobile/msgShow/js/msgshow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="66">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mobile/slide/js/MSlide.js">
+    <entry file="file://$PROJECT_DIR$/libs/common-mobile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        <state relative-caret-position="66">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mobile/MSlide/css/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mobile/MSlide/slide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-516">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+          <folding>
+            <element signature="e#608#895#0" expanded="false" />
+            <element signature="e#2585#3109#0" expanded="false" />
+            <element signature="e#3472#3547#0" expanded="false" />
+            <element signature="e#3633#4432#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
