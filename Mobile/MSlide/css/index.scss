@@ -27,12 +27,12 @@
     bottom: px2rem(30px);
     z-index: 5;
     width: 100%;
-    height: 0;
 
     ul {
       @include flexbox;
       @include flexbox-vc();
       @include flexbox-hc(center, center);
+      height: 0;
     }
     li {
       margin: 0 px2rem(10px);
@@ -44,7 +44,8 @@
 
       &.on {
         width: px2rem(50px);
-        background: rgba(255, 255, 255, .9);
+        //background: rgba(255, 255, 255, .9);
+        background: #f00;
       }
     }
   }

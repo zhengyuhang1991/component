@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eda56a4-6679-43fa-bb7e-3af35056b039" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/css/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/images/05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/js/MSlide.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/js/lib-flexible.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Mobile/slide/slide.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.css" afterPath="$PROJECT_DIR$/libs/common-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.css.map" afterPath="$PROJECT_DIR$/libs/common-mobile.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/common-mobile.scss" afterPath="$PROJECT_DIR$/libs/common-mobile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/css/index.css" afterPath="$PROJECT_DIR$/Mobile/MSlide/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/css/index.css.map" afterPath="$PROJECT_DIR$/Mobile/MSlide/css/index.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/css/index.scss" afterPath="$PROJECT_DIR$/Mobile/MSlide/css/index.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js" afterPath="$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js" />
     </list>
     <ignored path="component.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +32,8 @@
           <file leaf-file-name="slide.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Mobile/MSlide/slide.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-516">
-                  <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+                <state relative-caret-position="440">
+                  <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -66,14 +56,25 @@
           <file leaf-file-name="MSlide.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+                <state relative-caret-position="176">
+                  <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
                   <folding>
-                    <element signature="e#608#895#0" expanded="false" />
-                    <element signature="e#2585#3109#0" expanded="false" />
-                    <element signature="e#3472#3547#0" expanded="false" />
-                    <element signature="e#3633#4432#0" expanded="false" />
+                    <element signature="e#3430#3954#0" expanded="false" />
+                    <element signature="e#4036#4243#0" expanded="false" />
+                    <element signature="e#4317#4392#0" expanded="false" />
+                    <element signature="e#4478#5301#0" expanded="false" />
+                    <element signature="e#5382#5655#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Mobile/MSlide/css/index.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="350">
+                  <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -131,8 +132,8 @@
         <option value="$PROJECT_DIR$/Mobile/slide/js/MSlide.js" />
         <option value="$PROJECT_DIR$/libs/common-mobile.scss" />
         <option value="$PROJECT_DIR$/Mobile/MSlide/css/index.scss" />
-        <option value="$PROJECT_DIR$/Mobile/MSlide/slide.html" />
         <option value="$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js" />
+        <option value="$PROJECT_DIR$/Mobile/MSlide/slide.html" />
       </list>
     </option>
   </component>
@@ -274,14 +275,15 @@
       <workItem from="1496840998672" duration="13000" />
       <workItem from="1496841082446" duration="8931000" />
       <workItem from="1496931274074" duration="5063000" />
+      <workItem from="1497272282889" duration="7456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77613000" />
+    <option name="totallyTimeSpent" value="85069000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -493,35 +495,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile/MSlide/css/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="350">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile/MSlide/slide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-516">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        <state relative-caret-position="440">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+        <state relative-caret-position="176">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding>
-            <element signature="e#608#895#0" expanded="false" />
-            <element signature="e#2585#3109#0" expanded="false" />
-            <element signature="e#3472#3547#0" expanded="false" />
-            <element signature="e#3633#4432#0" expanded="false" />
+            <element signature="e#3430#3954#0" expanded="false" />
+            <element signature="e#4036#4243#0" expanded="false" />
+            <element signature="e#4317#4392#0" expanded="false" />
+            <element signature="e#4478#5301#0" expanded="false" />
+            <element signature="e#5382#5655#0" expanded="false" />
           </folding>
         </state>
       </provider>
