@@ -150,8 +150,8 @@
             idxBox.find("li:first-child").addClass("on");
         },
         /*
-        * 动画过渡设置
-        * */
+         * 动画过渡设置
+         * */
         setTransition: function (time) {
             var list = this.list,
                 t = time || 0;
@@ -162,16 +162,22 @@
             });
         },
         /*
-        * 返回坐标
-        * */
+         * 返回坐标
+         * */
         backPlace: function (ev) {
-            var x = ev.touches[0].pageX;
+            var x;
+
+            if (ev.originalEvent) {
+                x = ev.originalEvent.targetTouches[0].pageX;
+            } else {
+                x = ev.touches[0].pageX;
+            }
 
             return x;
         },
         /*
-        * 设置滑动值并高亮索引块
-        * */
+         * 设置滑动值并高亮索引块
+         * */
         setValue: function (idx, val) {
             var ops = this.ops,
                 MSlide = this.MSlide,
@@ -183,7 +189,7 @@
             if (val) {
                 list.css({
                     transform: "translate3d(" + ((-idx * width) + val) + "px, 0, 0)",
-                    webkitTransform: "translate3d(" + (-idx * width) + val + "px, 0, 0)"
+                    webkitTransform: "translate3d(" + ((-idx * width) + val) + "px, 0, 0)"
                 });
             } else {
                 list.css({
@@ -198,8 +204,8 @@
             }
         },
         /*
-        * 生成无缝展示DOM
-        * */
+         * 生成无缝展示DOM
+         * */
         createLoopDom: function () {
             var list = this.list,
                 ul = list.children("ul"),
