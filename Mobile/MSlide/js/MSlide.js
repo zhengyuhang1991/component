@@ -60,7 +60,9 @@
                 _this.startX = _this.backPlace(ev); //触摸坐标
                 _this.offsetX = 0;                  //滑动距离
 
-                clearInterval(timer);
+                if (ops.autoPlay) {
+                    clearInterval(timer);
+                }
             }
             //正在滑动事件
             var moveEvent = function (ev) {
@@ -101,14 +103,18 @@
                 _this.setValue(idx);
                 _this.setTransition(.3);      //滑动结束时添加过渡时间
 
-                timer = setInterval(autoPlay, autoPlayTime);
+                if (ops.autoPlay) {
+                    timer = setInterval(autoPlay, autoPlayTime);
+                }
             }
 
             el.on("touchstart", startEvent)
                 .on("touchmove", moveEvent)
                 .on("touchend", endEvent);
 
-            timer = setInterval(autoPlay, autoPlayTime);
+            if (ops.autoPlay) {
+                timer = setInterval(autoPlay, autoPlayTime);
+            }
 
             /*
              * 自动轮播展示
