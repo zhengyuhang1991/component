@@ -51,12 +51,19 @@
     <script src="../../libs/zepto.min.js"></script>
     <script src="js/MSlide.js"></script>
     <script>
+        /*
+         * 注:
+         * isLoop和borderBack只能有一个为true
+         * */
+
         //  调用MSlide方式
         var a = new MSlide({
             el: ".MSlide",      //  目标对象
             createIdx: true,    //  是否生成索引块
-            autoPlay: true,     //  是否自动播放
-            autoPlayTime: 3     //  自动播放间隔
+            isLoop:false,      //  是否循环展示
+            autoPlay: false,     //  是否自动播放
+            autoPlayTime: 2,     //  自动播放间隔
+            borderBack: true    //  是否开启边界回弹
         });
     </script>
 </body>

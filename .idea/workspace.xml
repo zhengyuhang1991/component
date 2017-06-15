@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5eda56a4-6679-43fa-bb7e-3af35056b039" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/css/index.css" afterPath="$PROJECT_DIR$/Mobile/MSlide/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/css/index.css.map" afterPath="$PROJECT_DIR$/Mobile/MSlide/css/index.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/css/index.scss" afterPath="$PROJECT_DIR$/Mobile/MSlide/css/index.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js" afterPath="$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mobile/MSlide/slide.html" afterPath="$PROJECT_DIR$/Mobile/MSlide/slide.html" />
     </list>
     <ignored path="component.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +24,14 @@
     <favorites_list name="component" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45607615">
+    <splitter split-orientation="horizontal" split-proportion="0.3967789">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="slide.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Mobile/MSlide/slide.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+                <state relative-caret-position="246">
+                  <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -56,15 +54,9 @@
           <file leaf-file-name="MSlide.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-                  <folding>
-                    <element signature="e#3430#3954#0" expanded="false" />
-                    <element signature="e#4036#4243#0" expanded="false" />
-                    <element signature="e#4317#4392#0" expanded="false" />
-                    <element signature="e#4478#5301#0" expanded="false" />
-                    <element signature="e#5382#5655#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="267">
+                  <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -72,7 +64,7 @@
           <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Mobile/MSlide/css/index.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
+                <state relative-caret-position="1034">
                   <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
                   <folding />
                 </state>
@@ -276,11 +268,12 @@
       <workItem from="1496841082446" duration="8931000" />
       <workItem from="1496931274074" duration="5063000" />
       <workItem from="1497272282889" duration="7456000" />
+      <workItem from="1497532998665" duration="3465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85069000" />
+    <option name="totallyTimeSpent" value="88534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -500,7 +493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile/MSlide/css/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="1034">
           <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
           <folding />
         </state>
@@ -508,23 +501,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile/MSlide/slide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        <state relative-caret-position="246">
+          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mobile/MSlide/js/MSlide.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding>
-            <element signature="e#3430#3954#0" expanded="false" />
-            <element signature="e#4036#4243#0" expanded="false" />
-            <element signature="e#4317#4392#0" expanded="false" />
-            <element signature="e#4478#5301#0" expanded="false" />
-            <element signature="e#5382#5655#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="267">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

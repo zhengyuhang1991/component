@@ -4,8 +4,10 @@
         this.ops = {
             el: null,      //  目标对象
             createIdx: true,    //  是否生成索引块
+            isLoop: false,      //  是否循环展示
             autoPlay: true,     //  是否自动播放
-            autoPlayTime: 3     //  自动播放间隔
+            autoPlayTime: 3,    //  自动播放间隔
+            borderBack: false    //  是否开启边界回弹
         };
 
         //  扩展默认参数
@@ -28,13 +30,22 @@
         init: function () {
             var ops = this.ops;
 
+            //  判断配置参数是否冲突
+            if (ops.isLoop && ops.borderBack) {
+                alert("注意: isLoop和borderBack只能有一个为true!");
+
+                return false;
+            }
+
             //  创建索引块
             if (ops.createIdx) {
                 this.createIdx();
             }
 
             //  创建循环展示DOM
-            this.createLoopDom();
+            if (ops.isLoop) {
+                this.createLoopDom();
+            }
 
             //  开始滑动
             this.start();
@@ -56,7 +67,7 @@
             this.setValue(idx);
 
             //开始滑动事件
-            var startEvent = function(ev) {
+            var startEvent = function (ev) {
                 _this.startX = _this.backPlace(ev); //触摸坐标
                 _this.offsetX = 0;                  //滑动距离
 
@@ -80,23 +91,53 @@
 
                 _this.setTransition();
 
-                if (_this.offsetX > border) {
-                    idx--;
-
-                    if (idx < 0) {
-                        idx = len - 2;
-                        _this.setValue(idx, _this.offsetX);
-
+                if (ops.isLoop) {
+                    if (_this.offsetX > border) {
                         idx--;
-                    }
-                } else if (_this.offsetX < -border) {
-                    idx++;
 
-                    if (idx >= len - 2) {
-                        idx = -1;
-                        _this.setValue(idx, _this.offsetX);
+                        if (idx < 0) {
+                            idx = len - 2;
+                            _this.setValue(idx, _this.offsetX);
 
+                            idx--;
+                        }
+                    } else if (_this.offsetX < -border) {
                         idx++;
+
+                        if (idx >= len - 2) {
+                            idx = -1;
+                            _this.setValue(idx, _this.offsetX);
+
+                            idx++;
+                        }
+                    }
+                } else if (ops.borderBack) {
+                    if (_this.offsetX > border) {
+                        idx--;
+
+                        if (idx < 0) {
+                            idx = 0;
+                        }
+                    } else if (_this.offsetX < -border) {
+                        idx++;
+
+                        if (idx > len - 1) {
+                            idx = len - 1;
+                        }
+                    }
+                } else {
+                    if (_this.offsetX > border) {
+                        idx--;
+
+                        if (idx < 0) {
+                            idx = len - 1;
+                        }
+                    } else if (_this.offsetX < -border) {
+                        idx++;
+
+                        if (idx > len - 1) {
+                            idx = 0;
+                        }
                     }
                 }
 
@@ -120,14 +161,22 @@
              * 自动轮播展示
              * */
             function autoPlay() {
-                if (idx >= len - 3) {
-                    idx = -1;
-                    _this.setTransition();
-                    _this.setValue(idx);
+                if (ops.isLoop) {
+                    if (idx >= len - 3) {
+                        idx = -1;
+                        _this.setTransition();
+                        _this.setValue(idx);
 
-                    idx++;
+                        idx++;
+                    } else {
+                        idx++;
+                    }
                 } else {
-                    idx++;
+                    if (idx >= len - 1) {
+                        idx = 0;
+                    } else {
+                        idx++;
+                    }
                 }
 
                 _this.setValue(idx);
@@ -190,7 +239,9 @@
                 list = this.list,
                 width = list.width();
 
-            idx++;
+            if (ops.isLoop) {
+                idx++;
+            }
 
             if (val) {
                 list.css({
@@ -205,8 +256,11 @@
             }
 
             if (ops.createIdx) {
+                if (ops.isLoop) {
+                    idx--;
+                }
                 MSlide.find(".MSlide-idx li").removeClass("on")
-                    .eq(idx - 1).addClass("on");
+                    .eq(idx).addClass("on");
             }
         },
         /*
