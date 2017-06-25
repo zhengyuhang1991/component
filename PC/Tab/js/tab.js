@@ -1,9 +1,8 @@
 ;(function () {
     Tab = function (ops) {
         this.ops = {
+            el: null,    //切换内容区
             mode: "click",      //切换模式
-            con: ".tab-con",    //控制块class
-            conbox: ".tab-conbox",  //切换内容区class
             autoRun: false,   //是否开启内容区域自动切换
             autoRunTime: 3,   //非必须，默认3秒自动切换区域(单位：秒)    注：autoRun为true才可启用
             defaultIdx: 1     //非必须，如无配置，默认显示高亮第一个控制块、显示第一个内容区域(最低数值1)
@@ -13,8 +12,9 @@
         $.extend(this.ops, ops);
 
         //获取目标
-        this.con = $(ops.con);
-        this.conbox = $(ops.conbox);
+        this.el = $(ops.el);
+        this.con = this.el.find(".tab-con");
+        this.conbox = this.el.find(".tab-conbox");
 
         //初始化
         this.init();
@@ -50,13 +50,13 @@
             if (mode != "click") {
                 mode = "mouseover";
             }
-            
+
             conLi.on(mode, function () {
                 var idx = $(this).index();
 
                 $(this)
                     .addClass("on").siblings().removeClass("on")
-                    .parents(ops.con).siblings(ops.conbox).children("div").eq(idx)
+                    .parents(".tab-con").siblings(".tab-conbox").children("div").eq(idx)
                     .addClass("on").siblings().removeClass("on");
             });
         },
@@ -72,6 +72,7 @@
             function commonToggle(obj) {
                 obj.eq(i).addClass("on").siblings().removeClass("on");
             }
+
             commonToggle(conLi);
             commonToggle(conboxDiv);
         },
@@ -101,6 +102,7 @@
                     timer = setInterval(startRun, runTime);
                 });
             }
+
             closeAutoRun(con);
             closeAutoRun(conbox);
 

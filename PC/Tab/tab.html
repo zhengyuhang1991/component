@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div class="tabbox">
+    <div class="tabbox" id="tabbox1">
         <div class="tab-con tab-con1">
             <ul>
                 <li>tab-1</li>
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="tabbox">
+    <div class="tabbox" id="tabbox2">
         <div class="tab-con tab-con2">
             <ul>
                 <li>tab-1</li>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="tabbox">
+    <div class="tabbox" id="tabbox3">
         <div class="tab-con tab-con3">
             <ul>
                 <li>tab-1</li>
@@ -109,8 +109,7 @@
     <script>
         //单个Tab选项卡调用方式
         /*var a = new Tab({
-            con: ".tab-con",    //控制块class
-            conbox: ".tab-conbox",  //切换内容区class
+            el: ".tabbox",    //切换内容区
             mode: "click",      //非必须,默认为点击切换
             autoRun: true,   //是否开启内容区域自动切换
             //autoRunTime: 3,   //非必须，默认3秒自动切换区域(单位：秒)    注：autoRun为true才可启用
@@ -121,10 +120,9 @@
         var tabLen = $(".tabbox").length;
         for (var i = 1; i <= tabLen; i++) {
             var a = new Tab({
-                con: ".tab-con" + i,    //控制块class
-                conbox: ".tab-conbox" + i,  //切换内容区class
+                el: "#tabbox" + i,    //切换内容区
                 mode: "mouseover",      //非必须,默认为点击切换
-                autoRun: false,   //是否开启内容区域自动切换
+                autoRun: true,   //是否开启内容区域自动切换
                 //autoRunTime: 3,   //非必须，默认3秒自动切换区域(单位：秒)    注：autoRun为true才可启用
                 //defaultIdx: 1   //非必须，如无配置，默认显示高亮第一个控制块、显示第一个内容区域(最低数值1)
             });
