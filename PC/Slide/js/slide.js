@@ -3,6 +3,7 @@
         this.ops = {
             el: null,    //传入外层容器选择器
             creatIdx: false, //是否生成索引块
+            autoPlay: false,    //是否自动切换
             autoRunTime: 3,    //每次自动运行间隔时间(单位:秒)
             transitionTime: .5    //动画过渡时间(单位:秒)
         }
@@ -108,15 +109,17 @@
                 idx = Slide.index,
                 timer = null; //设定定时器
 
-            //执行自动切换
-            timer = setInterval(slideGo, ops.autoRunTime * 1000);
-
-            //移入清除自动切换,移出时增加自动切换
-            wrap.mouseenter(function () {
-                clearInterval(timer);
-            }).mouseleave(function () {
+            if (ops.autoplay) {
+                //执行自动切换
                 timer = setInterval(slideGo, ops.autoRunTime * 1000);
-            });
+
+                //移入清除自动切换,移出时增加自动切换
+                wrap.mouseenter(function () {
+                    clearInterval(timer);
+                }).mouseleave(function () {
+                    timer = setInterval(slideGo, ops.autoRunTime * 1000);
+                });
+            }
 
             //索引块点击切换至对应板块
             $(idxBox).on("click", "li", function () {
