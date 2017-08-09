@@ -171,14 +171,13 @@
          * */
         runFix: function (i) {
             var ops = this.ops,
-                wrap = this.wrap,
                 slideBox = this.slideBox,
                 idxBox = this.idxBox,
                 idxLi = idxBox.find('li'),
-                wrapWidth = wrap.width();
+                moveWidth = slideBox.find("li:first").width();
 
             slideBox.animate({
-                left: -((i) * wrapWidth) + "px"
+                left: -((i) * moveWidth) + "px"
             }, ops.transitionTime * 1000);
 
             idxLi.removeClass("on")
