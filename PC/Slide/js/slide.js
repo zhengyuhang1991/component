@@ -17,6 +17,7 @@
         this.prev = this.wrap.find('.slide-prev');
         this.next = this.wrap.find('.slide-next');
         this.slideBox = this.wrap.find('.slide-box');
+        this.slideBoxUl = this.slideBox.find("ul");
         this.idxBox = $('<div class="slide-idx">');
 
         //初始化
@@ -33,15 +34,16 @@
             var ops = this.ops,
                 wrap = this.wrap,
                 slideBox = this.slideBox,
+                slideBoxUl = this.slideBoxUl,
                 wrapWidth = wrap.width(),
                 listHeight = this.list.height();
 
             //设定关键属性
-            wrap.css({
-                position: "relative",
-                height: listHeight
-            });
             slideBox.css({
+                position: "relative",
+                minHeight: listHeight
+            });
+            slideBoxUl.css({
                 position: "absolute",
                 left: -wrapWidth + "px"
             });
@@ -80,8 +82,8 @@
             wrap.append(idxBox);
         },
         /*
-        * 生成循环结构
-        * */
+         * 生成循环结构
+         * */
         createNew: function () {
             var list = this.list;
 
@@ -100,6 +102,7 @@
                 wrap = this.wrap,
                 wrapWidth = wrap.width(),
                 idxBox = this.idxBox,
+                slideBoxUl = this.slideBoxUl,
                 prev = this.prev,
                 next = this.next,
                 list = this.list,
@@ -109,7 +112,7 @@
                 idx = Slide.index,
                 timer = null; //设定定时器
 
-            if (ops.autoplay) {
+            if (ops.autoPlay) {
                 //执行自动切换
                 timer = setInterval(slideGo, ops.autoRunTime * 1000);
 
@@ -130,24 +133,24 @@
 
             //左右切换事件
             prev.click(function () {
-                if (!$(slideBox).is(":animated")) {
+                if (!$(slideBoxUl).is(":animated")) {
                     idx--;
 
                     if (idx < 1) {
                         idx = len - 1;
-                        slideBox.css("left", idx * -wrapWidth + "px");
+                        slideBoxUl.css("left", idx * -wrapWidth + "px");
                         idx--;
                     }
                     _this.runFix(idx);
                 }
             });
             next.click(function () {
-                if (!$(slideBox).is(":animated")) {
+                if (!$(slideBoxUl).is(":animated")) {
                     idx++;
 
                     if (idx >= len - 1) {
                         idx = 0;
-                        slideBox.css("left", idx * wrapWidth + "px");
+                        slideBoxUl.css("left", idx * wrapWidth + "px");
                         idx++;
                     }
                     _this.runFix(idx);
@@ -160,7 +163,7 @@
 
                 if (idx >= len - 1) {
                     idx = 0;
-                    slideBox.css("left", idx * wrapWidth + "px");
+                    slideBoxUl.css("left", idx * wrapWidth + "px");
                     idx++;
                 }
                 _this.runFix(idx);
@@ -171,12 +174,14 @@
          * */
         runFix: function (i) {
             var ops = this.ops,
+                wrap = this.wrap,
                 slideBox = this.slideBox,
+                slideBoxUl= this.slideBoxUl,
                 idxBox = this.idxBox,
                 idxLi = idxBox.find('li'),
                 moveWidth = slideBox.find("li:first").width();
 
-            slideBox.animate({
+            slideBoxUl.animate({
                 left: -((i) * moveWidth) + "px"
             }, ops.transitionTime * 1000);
 
