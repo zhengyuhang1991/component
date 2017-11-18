@@ -17,7 +17,6 @@
         this.prev = this.wrap.find('.slide-prev');
         this.next = this.wrap.find('.slide-next');
         this.slideBox = this.wrap.find('.slide-box');
-        this.slideBoxUl = this.slideBox.find("ul");
         this.idxBox = $('<div class="slide-idx">');
 
         //初始化
@@ -34,16 +33,15 @@
             var ops = this.ops,
                 wrap = this.wrap,
                 slideBox = this.slideBox,
-                slideBoxUl = this.slideBoxUl,
                 wrapWidth = wrap.width(),
                 listHeight = this.list.height();
 
             //设定关键属性
-            slideBox.css({
+            wrap.css({
                 position: "relative",
-                minHeight: listHeight
+                height: listHeight
             });
-            slideBoxUl.css({
+            slideBox.css({
                 position: "absolute",
                 left: -wrapWidth + "px"
             });
@@ -102,7 +100,6 @@
                 wrap = this.wrap,
                 wrapWidth = wrap.width(),
                 idxBox = this.idxBox,
-                slideBoxUl = this.slideBoxUl,
                 prev = this.prev,
                 next = this.next,
                 list = this.list,
@@ -112,7 +109,7 @@
                 idx = Slide.index,
                 timer = null; //设定定时器
 
-            if (ops.autoPlay) {
+            if (ops.autoplay) {
                 //执行自动切换
                 timer = setInterval(slideGo, ops.autoRunTime * 1000);
 
@@ -133,24 +130,24 @@
 
             //左右切换事件
             prev.click(function () {
-                if (!$(slideBoxUl).is(":animated")) {
+                if (!$(slideBox).is(":animated")) {
                     idx--;
 
                     if (idx < 1) {
                         idx = len - 1;
-                        slideBoxUl.css("left", idx * -wrapWidth + "px");
+                        slideBox.css("left", idx * -wrapWidth + "px");
                         idx--;
                     }
                     _this.runFix(idx);
                 }
             });
             next.click(function () {
-                if (!$(slideBoxUl).is(":animated")) {
+                if (!$(slideBox).is(":animated")) {
                     idx++;
 
                     if (idx >= len - 1) {
                         idx = 0;
-                        slideBoxUl.css("left", idx * wrapWidth + "px");
+                        slideBox.css("left", idx * wrapWidth + "px");
                         idx++;
                     }
                     _this.runFix(idx);
@@ -163,7 +160,7 @@
 
                 if (idx >= len - 1) {
                     idx = 0;
-                    slideBoxUl.css("left", idx * wrapWidth + "px");
+                    slideBox.css("left", idx * wrapWidth + "px");
                     idx++;
                 }
                 _this.runFix(idx);
@@ -174,14 +171,12 @@
          * */
         runFix: function (i) {
             var ops = this.ops,
-                wrap = this.wrap,
                 slideBox = this.slideBox,
-                slideBoxUl= this.slideBoxUl,
                 idxBox = this.idxBox,
                 idxLi = idxBox.find('li'),
                 moveWidth = slideBox.find("li:first").width();
 
-            slideBoxUl.animate({
+            slideBox.animate({
                 left: -((i) * moveWidth) + "px"
             }, ops.transitionTime * 1000);
 
