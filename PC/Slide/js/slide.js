@@ -109,7 +109,7 @@
                 idx = Slide.index,
                 timer = null; //设定定时器
 
-            if (ops.autoplay) {
+            if (ops.autoPlay) {
                 //执行自动切换
                 timer = setInterval(slideGo, ops.autoRunTime * 1000);
 
